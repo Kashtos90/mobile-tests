@@ -18,11 +18,11 @@ public class AndroidMobileTest {
         DesiredCapabilities caps = new DesiredCapabilities();
 
         // Set your access credentials
-        caps.setCapability("browserstack.user", "tpuretest_lSVWc2");
-        caps.setCapability("browserstack.key", "Ggd5nW19cyeGseGGn2m6");
+        caps.setCapability("browserstack.user", "kashtos_0mp4ha");
+        caps.setCapability("browserstack.key", "LyDCpPxK9acp55qDkpsq");
 
         // Set URL of the application under test
-        caps.setCapability("app", "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c");
+        caps.setCapability("app", "bs://f19a8afc4d2ae2a8a0a6895af1d0fb7deff41c85");
 
         // Specify device and os_version for testing
         caps.setCapability("device", "Google Pixel 3");
@@ -41,6 +41,10 @@ public class AndroidMobileTest {
 
         // Test case for the BrowserStack sample Android app.
         // If you have uploaded your app, update the test case here.
+        AndroidElement skipElement = (AndroidElement) new WebDriverWait(driver, 30).until(
+                ExpectedConditions.elementToBeClickable(
+                        MobileBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")));
+        skipElement.click();
         AndroidElement searchElement = (AndroidElement) new WebDriverWait(driver, 30).until(
                 ExpectedConditions.elementToBeClickable(
                         MobileBy.AccessibilityId("Search Wikipedia")));
