@@ -8,4 +8,9 @@ public interface CredentialsConfig extends Config {
     String user();
 
     String key();
+
+    String app();
+
+    String url();
+
 }
