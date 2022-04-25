@@ -32,7 +32,8 @@ public class TestBase {
         String sessionId = getSessionId();
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
-        Attach.video(sessionId);
+
         closeWebDriver();
+        Attach.video(sessionId);
     }
 }
