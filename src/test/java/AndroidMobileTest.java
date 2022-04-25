@@ -1,3 +1,4 @@
+import config.Credentials;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -18,8 +19,8 @@ public class AndroidMobileTest {
         DesiredCapabilities caps = new DesiredCapabilities();
 
         // Set your access credentials
-        caps.setCapability("browserstack.user", "kashtos_0mp4ha");
-        caps.setCapability("browserstack.key", "LyDCpPxK9acp55qDkpsq");
+        caps.setCapability("browserstack.user", Credentials.config.user());
+        caps.setCapability("browserstack.key", Credentials.config.key());
 
         // Set URL of the application under test
         caps.setCapability("app", "bs://f19a8afc4d2ae2a8a0a6895af1d0fb7deff41c85");
