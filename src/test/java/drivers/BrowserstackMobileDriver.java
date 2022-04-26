@@ -22,18 +22,11 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
     @Override
     public WebDriver createDriver(DesiredCapabilities caps) {
 
-        // Set your access credentials
         caps.setCapability("browserstack.user", Credentials.config.user());
         caps.setCapability("browserstack.key", Credentials.config.key());
-
-        // Set URL of the application under test
         caps.setCapability("app", Credentials.config.app());
-
-        // Specify device and os_version for testing
         caps.setCapability("device", "Google Pixel 3");
         caps.setCapability("os_version", "9.0");
-
-        // Set other BrowserStack capabilities
         caps.setCapability("project", "First Java Project");
         caps.setCapability("build", "browserstack-build-1");
         caps.setCapability("name", "first_test");

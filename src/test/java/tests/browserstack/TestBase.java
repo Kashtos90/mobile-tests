@@ -1,4 +1,7 @@
+package tests.browserstack;
+
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import drivers.BrowserstackMobileDriver;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -10,6 +13,7 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 import static helpers.Attach.getSessionId;
+import static io.qameta.allure.Allure.step;
 
 public class TestBase {
 
@@ -18,7 +22,6 @@ public class TestBase {
         addListener("AllureSelenide", new AllureSelenide());
 
         Configuration.browser = BrowserstackMobileDriver.class.getName();
-//        Configuration.startMaximized = false;
         Configuration.browserSize = null;
     }
 
@@ -34,7 +37,7 @@ public class TestBase {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
 
-        closeWebDriver();
+        step("Close driver", Selenide::closeWebDriver);
         Attach.video(sessionId);
     }
 }
