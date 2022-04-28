@@ -1,4 +1,4 @@
-package tests;
+package tests.emu;
 
 import com.codeborne.selenide.Configuration;
 import helpers.Attach;

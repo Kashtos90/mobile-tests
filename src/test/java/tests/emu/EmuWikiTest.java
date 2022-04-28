@@ -2,7 +2,6 @@ package tests.emu;
 
 import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.Test;
-import tests.TestBase;
 import io.appium.java_client.AppiumBy;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -11,7 +10,7 @@ import static io.qameta.allure.Allure.step;
 public class EmuWikiTest extends TestBase {
 
     @Test
-    void WikiTest() {
+    void wikiTest() {
         step("Verify First Page Getting Started", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView"))
                     .shouldHave(Condition.text("The Free Encyclopedia …in over 300 languages"));
