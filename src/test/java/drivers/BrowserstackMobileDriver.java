@@ -1,37 +1,40 @@
 package drivers;
 
-import config.Credentials;
 import com.codeborne.selenide.WebDriverProvider;
-import io.appium.java_client.android.AndroidDriver;
+import config.Credentials;
+import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 
 public class BrowserstackMobileDriver implements WebDriverProvider {
 
+    @Override
+    public WebDriver createDriver(Capabilities caps) {
+        MutableCapabilities mutableCapabilities = new MutableCapabilities();
+        mutableCapabilities.merge(caps);
+
+        mutableCapabilities.setCapability("browserstack.appium_version", "1.22.0");
+        mutableCapabilities.setCapability("browserstack.user", Credentials.configBro.user());
+        mutableCapabilities.setCapability("browserstack.key", Credentials.configBro.key());
+        mutableCapabilities.setCapability("app", Credentials.configBro.app());
+        mutableCapabilities.setCapability("device", "Samsung Galaxy S22 Plus");
+        mutableCapabilities.setCapability("os_version", "12.0");
+        mutableCapabilities.setCapability("project", "First Java Project");
+        mutableCapabilities.setCapability("build", "browserstack-build-1");
+        mutableCapabilities.setCapability("name", "first_test");
+
+        return new RemoteWebDriver(getBrowserstackUrl(), mutableCapabilities);
+    }
+
     public static URL getBrowserstackUrl() {
         try {
-            return new URL(Credentials.config.url());
+            return new URL(Credentials.configBro.url());
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    @Override
-    public WebDriver createDriver(DesiredCapabilities caps) {
-
-        caps.setCapability("browserstack.user", Credentials.config.user());
-        caps.setCapability("browserstack.key", Credentials.config.key());
-        caps.setCapability("app", Credentials.config.app());
-        caps.setCapability("device", "Google Pixel 3");
-        caps.setCapability("os_version", "9.0");
-        caps.setCapability("project", "First Java Project");
-        caps.setCapability("build", "browserstack-build-1");
-        caps.setCapability("name", "first_test");
-
-
-        return new AndroidDriver(getBrowserstackUrl(), caps);
     }
 }

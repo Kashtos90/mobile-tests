@@ -2,6 +2,7 @@ package tests.browserstack;
 
 import io.appium.java_client.MobileBy;
 import org.junit.jupiter.api.Test;
+import tests.TestBase;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Selectors.byClassName;
