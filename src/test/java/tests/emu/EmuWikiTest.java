@@ -11,7 +11,7 @@ import static io.qameta.allure.Allure.step;
 public class EmuWikiTest extends TestBase {
 
     @Test
-    void gettingStartedTest() {
+    void WikiTest() {
         step("Verify First Page Getting Started", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView"))
                     .shouldHave(Condition.text("The Free Encyclopedia …in over 300 languages"));
