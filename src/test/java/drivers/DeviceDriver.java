@@ -9,10 +9,8 @@ public class DeviceDriver {
                 return BrowserstackMobileDriver.class.getName();
             case "emulation":
                 return EmuMobileDriver.class.getName();
-            case "real":
-                return RealMobileDriver.class.getName();
             default:
-                throw new RuntimeException("Select device: browserstack / emulation / real");
+                throw new RuntimeException("Select device: browserstack / emulation");
         }
     }
 }
