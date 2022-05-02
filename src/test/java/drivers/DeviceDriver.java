@@ -2,7 +2,8 @@ package drivers;
 
 public class DeviceDriver {
 
-    public static String getDeviceDriver(String deviceHost) {
+    public static String getDeviceDriver () {
+        String deviceHost = System.getProperty("deviceHost");
 
         switch (deviceHost) {
             case "browserstack":

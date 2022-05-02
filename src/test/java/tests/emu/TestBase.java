@@ -20,7 +20,7 @@ public class TestBase {
     public static void setup() {
         addListener("AllureSelenide", new AllureSelenide());
 
-        Configuration.browser = getDeviceDriver(deviceHost);
+        Configuration.browser = getDeviceDriver();
         Configuration.browserSize = null;
     }
 
