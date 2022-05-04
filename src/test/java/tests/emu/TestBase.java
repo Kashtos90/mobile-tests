@@ -25,11 +25,14 @@ public class TestBase {
         switch (deviceHost) {
             case "browserstack":
                 Configuration.browser = BrowserstackMobileDriver.class.getName();
+                break;
             case "emulation":
                 Configuration.browser = EmuMobileDriver.class.getName();
+                break;
             default:
                 throw new RuntimeException("Select device: browserstack / emulation");
         }
+        Configuration.browserSize = null;
     }
 
     @BeforeEach
