@@ -3,7 +3,7 @@ package config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({"classpath:config/emu.properties"})
-public interface EmuConfig  extends Config {
+public interface EmuConfig extends Config {
 
     @Config.Key("appPackage")
     String appPackage();
