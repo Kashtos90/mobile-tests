@@ -12,5 +12,4 @@
 
 ## :hammer_and_wrench: Технологический стек
 > Для разработки проекта использовался следующий инструментарий:
-
-![Allure Report](https://github.com/Kashtos90/mobile-tests/blob/22hw/src/test/java/images/Allure_Report.svg)
+> 
