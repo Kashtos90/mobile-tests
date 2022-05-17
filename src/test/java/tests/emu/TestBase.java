@@ -9,9 +9,9 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 
-import static com.codeborne.selenide.Selenide.closeWebDriver;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
+import static helpers.Attach.getSessionId;
 
 
 public class TestBase {
@@ -42,9 +42,11 @@ public class TestBase {
 
     @AfterEach
     public void afterEach() {
+        String sessionId = getSessionId();
 
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
+        Attach.video(sessionId);
 
         closeWebDriver();
     }
