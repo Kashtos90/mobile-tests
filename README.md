@@ -11,3 +11,6 @@
 - [Видео-пример теста](https://github.com/Kashtos90/mobile-tests/edit/main/README.md#film_strip-%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE-%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80-%D0%BF%D1%80%D0%BE%D1%85%D0%BE%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F-%D1%82%D0%B5%D1%81%D1%82%D0%B0)
 
 ## :hammer_and_wrench: Технологический стек
+> Для разработки проекта использовался следующий инструментарий:
+
+![Allure Report](https://github.com/Kashtos90/mobile-tests/blob/22hw/src/test/java/images/Allure_Report.svg)
