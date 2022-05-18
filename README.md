@@ -55,8 +55,3 @@ clean  test -DdeviceHost=emulation
 > К каждому отчету в Allure прикрепляется видео о прохождении
 
 ![03996fd3c12ed7424b61b73f93b5b8f0dbc86598 (1)](https://user-images.githubusercontent.com/99273725/169075894-173a978f-6e68-4cd2-9dc2-0d827b24395f.gif)
-
-
-
-
-
