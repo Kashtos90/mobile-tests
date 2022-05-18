@@ -12,17 +12,19 @@
 
 ## :hammer_and_wrench: Технологический стек
 > Для разработки проекта использовался следующий инструментарий:
-
-![Intelij_IDEA](https://user-images.githubusercontent.com/99273725/168892057-586b90b6-6692-49f4-97e5-7ba8a6828477.svg)
-![Selenide](https://user-images.githubusercontent.com/99273725/168892091-69be3f3c-156b-40a7-ba6a-0cfa14f73bcf.svg)
-![Java (1)](https://user-images.githubusercontent.com/99273725/168892117-9f8fe75a-9e0b-45c0-8767-04d9fcce119e.svg)
-![Allure_Report](https://user-images.githubusercontent.com/99273725/168892155-a0847d85-7b7b-452b-8e82-1f9d3c4b2612.svg)
-![Gradle](https://user-images.githubusercontent.com/99273725/168892169-75fccae4-e272-49f9-9289-b5cce811f6dc.svg)
-![Github](https://user-images.githubusercontent.com/99273725/168892184-520aa3fe-1b54-4253-81e2-1432894092ab.svg)
-![Jenkins](https://user-images.githubusercontent.com/99273725/168892277-7182faa6-dba7-4094-9559-177c0202b00d.svg)
-![Appium](https://user-images.githubusercontent.com/99273725/168892293-7a510d97-7007-4db9-8f76-37c813a31992.svg)
-![Browserstack](https://user-images.githubusercontent.com/99273725/168892315-39d5f7ed-5bcf-49f5-8cc2-0efdd64b3638.svg)
-![JUnit5](https://user-images.githubusercontent.com/99273725/168892326-d694324b-9699-4bd2-8b1c-7d0fa42ea454.svg)
+> 
+<p align="center">
+<img width="6%" title="IntelliJ IDEA" src="images/logo/Intelij_IDEA.svg">
+<img width="6%" title="Java" src="images/logo/Java.svg">
+<img width="6%" title="JUnit5" src="images/logo/JUnit5.svg">
+<img width="6%" title="Selenide" src="images/logo/Selenide.svg">
+<img width="6%" title="Gradle" src="images/logo/Gradle.svg">
+<img width="6%" title="GitHub" src="images/logo/GitHub.svg">
+<img width="6%" title="Jenkins" src="images/logo/Jenkins.svg">
+<img width="6%" title="Appium" src="images/logo/appium.svg">
+<img width="6%" title="Browserstack" src="images/logo/browserstack-icon.svg">
+<img width="6%" title="Allure Report" src="images/logo/Allure_Report.svg">
+</p>
 
 
 
