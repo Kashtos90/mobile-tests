@@ -26,5 +26,24 @@
 <img width="6%" title="Allure Report" src="images/logo/Allure_Report.svg">
 </p>
 
+## :heavy_check_mark: Реализованные тесты
+В проекте была реализована проверка 4-ёх приветственных экранов при первом запуске мобильного приложения. 
+
+## :robot: Сборка в Jenkins
+Тесты написаны с учётом локального запуска через эмулятор. Поскольку к Jenkins невозможно подключить физическое устройство или эмулятор, в сборке настраивается запуск исключительно через Browserstack. Протестировать код можно [здесь](https://jenkins.autotests.cloud/job/wiki-mobile-test/). 
+
+![jenkins](https://user-images.githubusercontent.com/99273725/169070461-8c53085f-024c-4da1-bcdd-099d1dd1692b.jpg)
+
+## :computer: Запуск из терминала
+Тесты можно запустить на Browserstack через терминал командой
+```
+clean  test -DdeviceHost=browserstack
+```
+
+А также через эмулятор командой
+```
+clean  test -DdeviceHost=emulation
+```
+Для каждого из стендов заданы кофигурационные параметры в файлах .properties, применение которых реализовано с помощью библиотеки Owner.
 
 
