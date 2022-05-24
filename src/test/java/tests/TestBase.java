@@ -1,4 +1,4 @@
-package tests.emu;
+package tests;
 
 import com.codeborne.selenide.Configuration;
 import drivers.BrowserstackMobileDriver;
